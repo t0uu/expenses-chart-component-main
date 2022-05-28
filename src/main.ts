@@ -1,12 +1,8 @@
+import data from '../data.json'
 import './style.css'
 
-
 const containerChart = document.getElementById('containerChart') as HTMLElement
-const getData = async() =>  {
-        const response = await fetch('/data.json');
-        const data:[] = await response.json();
-        
-        
+const getData = () =>  {
          data.forEach(element => {
          const {day,amount} = element
              
@@ -19,7 +15,6 @@ const getData = async() =>  {
          `
          });  
     }
-
 
 
 getData()
