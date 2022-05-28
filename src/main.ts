@@ -1,8 +1,6 @@
 import './style.css'
 
 
-
-// const App = document.getElementById('App') as HTMLElement;
 const containerChart = document.getElementById('containerChart') as HTMLElement
 const getData = async() =>  {
         const response = await fetch('/data.json');
