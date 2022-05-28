@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+:root{
+  /* ### Primary */
+--Soft-red: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+  
+  /* ### Neutral */
+--Dark-brown: hsl(25, 47%, 15%);
+--Medium-brown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--Cream);
+}
+
+@media(min-width:320px){
+  body{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+  align-items: center;
+   text-align: center;
+  }
+  .Container{
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .Boxbalance{
+    background-color: var(--Soft-red);
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    width: 300px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  .Textbalance{
+    color:var(--Cream);
+    padding: 0.5rem;
+  }
+  .Textbalance h2{
+    padding: 0;
+    margin: 0rem;
+    font-weight: 700;
+  }
+  .Textbalance p{
+    padding: 0;
+    margin: 0rem 0rem 0.5rem 0rem;
+    font-weight: 400;
+  }
+
+  .LogoBalance .Logo{
+    width: 4.5rem;
+    height: 2.6rem;
+  }
+
+  /* Chart Bars*/
+  .ContainerData{
+    max-width:300px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: var(--Very-pale-orange);
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  .ContainerData .titleSpending{
+    text-align: left;
+    margin-left: 0.5rem;
+    color: var(--Dark-brown);
+  }
+  .containerCharts{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0.5rem;
+    margin: auto;
+    border-bottom: 1px solid rgba(159, 158, 158, 0.457);
+    padding: 0.5rem 0rem;
+  }
+  .barChart{
+    width:10px;
+    margin: 0.4rem;
+    padding: 0.6rem;
+    background-color:var(--Soft-red);
+    border-radius: 3px;
+  }
+  .containerBars:nth-child(3) .barChart{
+    background-color:var(--Cyan);
+  }
+  .containerBars .textDay{
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.356);
+  }
+  .numbers{
+    background-color: var(--Dark-brown);
+    color: var(--Cream);
+    padding: 0.1rem;
+    margin: 0.5rem 0rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    visibility: hidden;
+  }
+  .barChart:hover{
+    background-color: hsl(10, 90%, 73%);
+    cursor:pointer;
+  }
+  .containerBars:hover .numbers {
+   visibility: visible;
+  
+   }
+
+   .containerMounth{
+     display: flex;
+     align-items: center;
+     align-self: center;
+     align-items: center;
+     justify-content: space-between;
+     width: 260px;
+     margin: 1rem;
+    }
+   .totalMonth{
+     display: flex;
+     flex-direction: column;
+    }
+   .totalMonth h2{
+     margin: 0;
+   }
+   .totalMonth small{
+    color:rgb(94, 92, 92);
+    padding: 0.3rem 0rem;
+   }
+   .lastMonth{
+     display: flex;
+     padding: 1rem 0rem;
+     flex-direction: column;
+   }
+   .lastMonth b{
+     text-align: right;
+   }
+   .lastMonth small{
+    color:rgb(94, 92, 92);
+   }
+ 
+}
+
+@media(min-width:1024px){
+
+  .Boxbalance{
+    width: 350px;
+  }
+  .ContainerData{
+    max-width: 350px;
+  }
+  .numbers{
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .barChart{
+    width: 15px;
+  }
+  .containerMounth{
+    width: 300px;
+  }
+}
